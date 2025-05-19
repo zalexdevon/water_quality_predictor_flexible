@@ -1,5 +1,6 @@
 from Mylib import myfuncs
 import os
+from src.utils import funcs
 
 
 def save_data_for_data_correction(
@@ -15,3 +16,7 @@ def save_data_for_data_correction(
     myfuncs.save_python_object(
         os.path.join(data_correction_path, "transformer.pkl"), transformer
     )
+
+
+def test_utils_run_on_python(text):
+    return funcs.print_text(text)

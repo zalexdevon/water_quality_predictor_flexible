@@ -51,6 +51,7 @@ def train_on_batches(model, data_transformation_path, num_batch, scoring):
     list_train_scoring = []  # Cần biến này vì có thể sau này lấy min, max, ...
 
     # Fit batch đầu tiên
+
     first_feature_batch = myfuncs.load_python_object(
         os.path.join(data_transformation_path, f"train_features_0.pkl")
     )
@@ -59,7 +60,9 @@ def train_on_batches(model, data_transformation_path, num_batch, scoring):
     )
 
     # Lần đầu nên fit bình thường
+    print("Bắt đầu train batch thứ 0")
     model.fit(first_feature_batch, first_target_batch)
+    print("Kết thúc train batch thứ 0")
 
     first_train_scoring = myfuncs.evaluate_model_on_one_scoring_17(
         model,
@@ -80,7 +83,9 @@ def train_on_batches(model, data_transformation_path, num_batch, scoring):
         )
 
         # Lần thứ 1 trở đi thì fit theo kiểu incremental
+        print(f"Bắt đầu train batch thứ {i}")
         myfuncs.fit_model_incremental_learning(model, feature_batch, target_batch)
+        print(f"Kết thúc train batch thứ {i}")
 
         train_scoring = myfuncs.evaluate_model_on_one_scoring_17(
             model,

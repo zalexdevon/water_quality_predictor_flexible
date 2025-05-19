@@ -75,3 +75,7 @@ def train_and_save_models(
 def get_batch_size_from_model_training_name(name):
     pattern = r"batch_(\d+)"
     return re.findall(pattern, name)[0]
+
+
+def print_text(text):
+    print(f"Demo cho utils nè mấy ní ơi !!!!!! {text}")
