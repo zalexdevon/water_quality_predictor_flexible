@@ -68,7 +68,7 @@ class ConvertTrainingDataToBatchesTransformer(BaseEstimator, TransformerMixin):
 class CustomClassifierForBatchDataTransformationModelTraining(
     BaseEstimator, ClassifierMixin
 ):
-    def __init__(self, model, fit_type, data_transformation_path, num_batch, scoring):
+    def __init__(self, model, data_transformation_path, scoring):
         """Phục vụ cho step model trong pipeline sử dụng trong data_transformation_model_training có batch <br>
         Đáp ứng cho việc train trên tập test và train trên tập train (có batch)
 
