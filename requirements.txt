@@ -1,5 +1,3 @@
-python-box==6.0.2
-types-PyYAML
 lightgbm
 zzzz_mylib_23_4==0.79
 # -e .
