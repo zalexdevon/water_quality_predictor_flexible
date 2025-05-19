@@ -60,7 +60,9 @@ class ConvertTrainingDataToBatchesTransformer(BaseEstimator, TransformerMixin):
             )
 
     def transform(self, X, y=None):
+        # TODO: d
         print("Tập val thì không làm gì cả nhé !!!!!")
+        # d
 
         return X
 
@@ -87,7 +89,9 @@ class CustomClassifierForBatchDataTransformationModelTraining(
         self.scoring = scoring
 
     def fit(self, X, y):
+        # TODO: d
         print("Fit cho tập training nè")
+        # d
 
         # Get num_batch
         num_batch = myfuncs.load_python_object(
@@ -150,7 +154,9 @@ class CustomClassifierForBatchDataTransformationModelTraining(
         return self
 
     def predict(self, X):
+        # TODO: d
         print(f"Chỗ này đi đánh giá nè")
+        # d
 
         return self.model.predict(X)
 
