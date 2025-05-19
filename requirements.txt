@@ -1,3 +1,2 @@
-lightgbm
 zzzz_mylib_23_4==0.79
 # -e .
