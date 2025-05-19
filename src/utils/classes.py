@@ -22,10 +22,10 @@ class ConvertTrainingDataToBatchesTransformer(BaseEstimator, TransformerMixin):
     def fit(self, X, y=None):
         # TODO: d
         print("Tiến hành chia batch cho tập train nè !!!!!")
-        print("X: " X)
-        print("y: " y)
+        print("X: ", X)
+        print("y: ", y)
         # d
-        
+
         num_train_samples = len(X)
 
         start_indices = range(
