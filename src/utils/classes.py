@@ -36,8 +36,8 @@ class ConvertTrainingDataToBatchesTransformer(BaseEstimator, TransformerMixin):
 
         # Save training batch
         for batch_index, start_index in enumerate(start_indices):
-            feature = X.iloc[start_index : start_index + self.batch_size, :]
-            target = y.iloc[start_index : start_index + self.batch_size]
+            feature = X[start_index : start_index + self.batch_size, :]
+            target = y[start_index : start_index + self.batch_size]
 
             # Save feature và target
             myfuncs.save_python_object(
