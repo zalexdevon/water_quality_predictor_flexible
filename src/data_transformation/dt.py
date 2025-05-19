@@ -38,12 +38,6 @@ def load_data_for_data_transformation(data_correction_path):
         df_train
     )
 
-    # Load các transfomers
-    list_after_feature_transformer = [
-        stringToObjectConverter.convert_MLmodel_yaml_to_object(transformer)
-        for transformer in list_after_feature_transformer
-    ]
-
     return (
         df_train,
         feature_ordinal_dict,
@@ -52,7 +46,6 @@ def load_data_for_data_transformation(data_correction_path):
         num_train_sample,
         feature_cols,
         target_col,
-        list_after_feature_transformer,
     )
 
 
