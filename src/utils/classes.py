@@ -91,7 +91,7 @@ class CustomClassifierForBatchDataTransformationModelTraining(
 
         # Get num_batch
         num_batch = myfuncs.load_python_object(
-            self.data_transformation_path, "num_batch.pkl"
+            os.path.join(self.data_transformation_path, "num_batch.pkl")
         )
 
         list_train_scoring = []  # Cần biến này vì có thể sau này lấy min, max, ...
