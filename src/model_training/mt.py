@@ -51,7 +51,6 @@ def train_on_batches(model, data_transformation_path, num_batch, scoring):
     list_train_scoring = []  # Cần biến này vì có thể sau này lấy min, max, ...
 
     # Fit batch đầu tiên
-
     first_feature_batch = myfuncs.load_python_object(
         os.path.join(data_transformation_path, f"train_features_0.pkl")
     )
