@@ -65,8 +65,8 @@ class ConvertTrainingDataToBatchesTransformer(BaseEstimator, TransformerMixin):
         return X
 
     def fit_transform(self, X, y=None):
-        self.fit(X)
-        return self.transform(X)
+        self.fit(X, y)
+        return self.transform(X, y)
 
 
 class CustomClassifierForBatchDataTransformationModelTraining(
